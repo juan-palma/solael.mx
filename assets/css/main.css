@@ -298,8 +298,8 @@ div#ventanaPOP {
 	}
   }
 div#whatsapp {
-    width: 110px;
-    height: 110px;
+    width: 94px;
+    height: 94px;
     position: fixed;
     bottom: 6vh;
     right: 6vw;
@@ -310,9 +310,9 @@ div#whatsapp {
 }
 @media screen and (orientation:portrait) and (max-width: 680px){
 	div#whatsapp {
-		width: 74px;
-		height: 74px;
-		bottom: 10vh;
+		width: 72px;
+		height: 72px;
+		bottom: 6vh;
 		right: 4vw;
 	}	
 }
@@ -619,7 +619,6 @@ nav#menu {
 	}
 	div#slogan {
 		border-left: 0px none transparent;
-		border-top: 1px solid #fff;
 		width: 82%;
 		margin: 0px;
 	}
@@ -844,7 +843,7 @@ div#serviciosInfo {
 				position: absolute;
 				top: 0px;
 				left: 0px;
-				background-color: #00000088;
+				background-color: #00000022;
 			}
 			div#serviciosInfo .colBox .info {
 				position: relative;
@@ -1325,11 +1324,7 @@ div#contacto .fondo {
 	:root{
 		--margenGlobal: 8vw;
 	}
-
-	div#whatsapp {
-		width: 80px;
-		height: 80px;
-	}
+	
 
 	nav#menu {
 		padding: 10px 0px;
