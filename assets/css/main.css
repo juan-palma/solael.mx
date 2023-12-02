@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6{
 	font-weight: 900;
 }
 body, button, input, select, textarea, ::after, ::before{
-	font-family: 'Alegreya', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 	line-height: 1.24;
 	letter-spacing: 0.05em;
@@ -161,7 +161,9 @@ p {
 p:last-of-type {
 	margin-bottom: 0;
 }
-
+.negritas{
+	font-weight: 800;
+}
 
 
 
@@ -395,7 +397,7 @@ div#whatsapp {
 ========================================================================== */
 .anchorTagEl{
 	display: block;
-	position: relative;
+	position: absolute;
 	top: -120px;
 	left: 0px;
 	visibility: hidden;
@@ -668,18 +670,163 @@ nav#menu {
 		}
 
 
-	div#nosotros {
+div#nosotros {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: stretch;
+}
+	div#nosotros .colBox {
+		position: relative;
+		flex: 1 1 50%;
+	}
+		div#nosotros .colBox .fondo::after {
+			content: "";
+			width: 100%;
+			height: 100%;
+			display: block;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			background-color: #00000088;
+		}
+		div#nosotros .colBox .info {
+			position: relative;
+			padding: 6vw;
+			padding-top: 44%;
+			color: #fff;
+		}
+			div#nosotros .colBox .info h2 {
+				font-size: 150%;
+				display: inline-block;
+				padding: 6px 16px;
+				margin-bottom: 20px;
+				background-color: var(--colorPrincipal);
+			}
+			div#nosotros .colBox .info p{
+				display: flex;
+				flex-direction: column;
+				grid-gap: 6px;
+			}
+
+
+
+
+
+div#proceso {
+    background-color: var(--colorPrincipal);
+}
+	#proceso .container {
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		grid-gap: 46px;
+		position: relative;
+		align-items: center;
+		color: white;
+		padding: 8vw 0px;
+		text-align: center;
+	}
+		div#proceso .container span {
+			font-size: 120%;
+		}
+		div#proceso .container h2 {
+			color: black;
+			font-size: 200%;
+		}
+		div#procesosBox {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			grid-gap: 62px;
+		}
+			div#procesosBox .proceso {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				grid-gap: 38px;
+				flex: 1 1 calc(33% - 41px);
+				width: calc(33% - 41px);
+				max-width: calc(33% - 41px);
+				min-width: calc(33% - 41px);
+				text-align: center;
+			}
+				div#procesosBox .icono {
+					width: 120px;
+					height: 120px;
+					position: relative;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					background-color: white;
+					border-radius: 50%;
+					box-shadow: 0 17px 25px #00000044;
+				}
+					div#procesosBox .icono picture {
+						width: 92%;
+						height: 92%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+					}
+						div#procesosBox .icono picture img {
+							width: 100%;
+							height: auto;
+						}
+
+
+
+						
+
+
+
+div#servicios {
+    background-color: white;
+}
+	#servicios .container {
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		grid-gap: 46px;
+		position: relative;
+		align-items: center;
+		color: white;
+		padding: 4vw 0px;
+		text-align: center;
+	}						
+		div#servicios .container span {
+			color: black;
+			font-size: 120%;
+		}
+		div#servicios .container h2 {
+			color: var(--colorPrincipal);
+			font-size: 300%;
+			font-weight: 600;
+		}
+div#serviciosInfo {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: stretch;
+}
+	#serviciosInfo .btnBoxBtn {
 		position: relative;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-content: stretch;
+		width: 100%;
 	}
-		div#nosotros .colBox {
+		div#serviciosInfo .colBox {
 			position: relative;
 			flex: 1 1 50%;
 		}
-			div#nosotros .colBox .fondo::after {
+			div#serviciosInfo .colBox .fondo::after {
 				content: "";
 				width: 100%;
 				height: 100%;
@@ -687,199 +834,41 @@ nav#menu {
 				position: absolute;
 				top: 0px;
 				left: 0px;
-				background-color: #00000066;
+				background-color: #00000088;
 			}
-			div#nosotros .colBox .info {
+			div#serviciosInfo .colBox .info {
 				position: relative;
-				padding: 6vw;
+				padding: 2vw 4vw;
 				padding-top: 44%;
 				color: #fff;
 			}
-				div#nosotros .colBox .info h2 {
+				div#serviciosInfo .colBox .info h2 {
 					font-size: 150%;
 					display: inline-block;
 					padding: 6px 16px;
 					margin-bottom: 20px;
 					background-color: var(--colorPrincipal);
 				}
-
-
-
-
+				div#serviciosInfo .colBox .info p{
+					display: flex;
+					flex-direction: column;
+					grid-gap: 6px;
+				}
+	#serviciosInfo .btnBoxInfo {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		display: flex;
+		top: 0px;
+		left: 0px;
+		overflow: hidden;
+		z-index: 20;
+	}
 
 		
 
 
 
-
-div#empresa {
-	position: relative;
-    background-color: var(--colorPrincipal);
-}
-	div#empresa .container {
-		padding: 9vh 10% 9vh 0px;
-		display: flex;
-		justify-content: center;
-	}
-		#textoEmpresa {
-			width: 80%;
-			max-width: 1260px;
-			padding: 2vh 2vw;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: flex-start;
-			color: white;
-		}
-			#textoEmpresa h2 {
-				font-size: clamp(28px, 2.4vw, 48px);
-				margin-bottom: 25px;
-			}
-			#textoEmpresa p {
-				font-size: clamp(20px, 1.3vw, 38px);
-			}
-
-
-		div#servicios {
-			flex-direction: column;
-			align-items: center;
-			background-color: white;
-			padding: 12vh 0px;
-		}
-			div#servicios .container {
-				display: grid;
-				text-align: left;
-				max-width: 860px;
-			}
-				div#servicios .container h2 {
-					font-size: clamp(28px, 2.4vw, 48px);
-					margin-bottom: 25px;
-				}
-				div#info {
-					width: 100%;
-					position: relative;
-					display: grid;
-					grid: 'g p'
-						'f f';
-					grid-gap: 40px;
-					grid-template-columns: 1fr 1fr;
-				}
-					div#articulosBox article {
-						position: relative;
-						flex: 1 1 33.333%;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						aspect-ratio: 1;
-						overflow: hidden;
-						cursor: pointer;
-					}
-						article#servGeneral {
-							grid-area: g;
-						}
-						article#servPatrimonio {
-							grid-area: p;
-						}
-						article#servFamiliar {
-							grid-area: f;
-						}
-							#info article img {
-								width: 100%;
-								height: auto;
-								aspect-ratio: 1;
-								object-fit: cover;
-							}
-							article#servFamiliar img {
-								aspect-ratio: 2/1;
-							}
-							#info article figcaption {
-								margin-top: 26px;
-								font-size: 120%;
-							}
-								#info article figcaption h3 {
-									font-size: clamp(18px, 1.4vw, 28px);
-									margin-bottom: 12px;
-									color: var(--colorPrincipal);
-								}
-			div#todos {
-				position: relative;
-				padding-top: 7vh;
-			}
-			div#todos > h3{
-				font-size: clamp(22px, 2.4vw, 38px);
-				margin-bottom: 2rem;
-			}
-				div#acordeonServicios {
-					display: flex;
-					flex-direction: column;
-					grid-gap: 24px;
-				}
-					.idaAcordeon .box h4.titulo {
-						font-size: clamp(18px, 1vw + 0.4rem , 22px);
-						font-weight: 700;
-						background-color: var(--colorSecundario);
-						padding-left: 66px;
-						padding-right: 28%;
-					}
-						.idaAcordeon .box h4.titulo::before{
-							content: "";
-							width: 20px;
-							height: 100%;
-							display: block;
-							position: absolute;
-							top: 0px;
-							left: 0px;
-							background-color: var(--colorPrincipal);
-
-							-webkit-transition: all 0.3s ease-in-out;
-							-moz-transition: all 0.3s ease-in-out;
-							-o-transition: all 0.3s ease-in-out;
-							-ms-transition: all 0.3s ease-in-out;
-							transition: all 0.3s ease-in-out;
-						}
-					.idaAcordeon .box.activo h4.titulo,
-					.idaAcordeon .box h4.titulo:hover{
-						color: #fff;
-					}
-						.idaAcordeon .box.activo h4.titulo::before,
-						.idaAcordeon .box h4.titulo:hover::before{
-							background-color: var(--colorBackColor);
-							width: 50px;
-						}
-					.idaAcordeon .box ul {
-						list-style: inside;
-						padding-left: 24px;
-					}
-				#imgBusto {
-					width: 72%;
-					position: absolute;
-					top: -1vh;
-					right: 0;
-					transform: translateX(56%);
-				}
-					#todos picture img {
-						width: 100%;
-						height: auto;
-					}
-
-
-				
-	div#columnaFondo {
-		display: block;
-		position: absolute;
-		height: 100%;
-		width: clamp(130px, 20vw, 600px);
-		top: 0px;
-		right: 0vw;
-		z-index: 0;
-	}
-		div#columnaFondo img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			object-position: left top;
-		}
-				
 				
 
 
@@ -939,6 +928,15 @@ div#contacto .fondo {
 		#contacto span:hover{
 			color: var(--colorPrincipal);
 		}
+
+
+
+
+
+
+
+
+		
 		
 
 
@@ -1397,6 +1395,23 @@ div#contacto .fondo {
 		div#frase .container h2 {
 			font-size: 160%;
 		}
+
+	div#nosotros .colBox .info {
+		padding: 12vw;
+	}
+	div#procesosBox .proceso {
+		flex: 1 1 100%;
+		width: 100%;
+		max-width: 100%;
+		min-width: 100%;
+	}
+
+	#servicios .container {
+		padding: 12vw 0px;
+	}
+	div#servicios .container h2 {
+		font-size: 245%;
+	}
 }
 
 
