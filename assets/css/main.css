@@ -843,16 +843,29 @@ div#serviciosInfo {
 				color: #fff;
 			}
 				div#serviciosInfo .colBox .info h2 {
-					font-size: 150%;
+					font-size: 200%;
 					display: inline-block;
-					padding: 6px 16px;
 					margin-bottom: 20px;
-					background-color: var(--colorPrincipal);
 				}
 				div#serviciosInfo .colBox .info p{
 					display: flex;
 					flex-direction: column;
 					grid-gap: 6px;
+				}
+				div#serviciosInfo .colBox .info button {
+					font-size: 130%;
+					display: inline-block;
+					padding: 6px 16px;
+					margin-top: 24px;
+					background-color: var(--colorPrincipal);
+					color: white;
+					font-size: 110%;
+					appearance: none;
+					border: 0px none transparent;
+					outline: none;
+					cursor: pointer;
+					position: relative;
+					z-index: 500;
 				}
 	#serviciosInfo .btnBoxInfo {
 		width: 100%;
