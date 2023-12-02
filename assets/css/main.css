@@ -24,12 +24,15 @@
 html, body{
 	scroll-behavior: smooth;
 }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
+	font-size: 1.1rem;
+}
 
 :root{
 	--colorBackDark: #1a1918;
-	--colorBackColor: #2c2a29;
-	--colorPrincipal: #e26c2e;
-	--colorSecundario: #ffd5c5;
+	--colorBackColor: #686868;
+	--colorPrincipal: #ef9659;
+	--colorSecundario: #8c2e06;
 	--colorTexto: var(--colorBackColor);
 	--margenGlobal: 6vw;
 	--anchoContainer: calc(100vw - (var(--margenGlobal) * 2));
@@ -90,6 +93,11 @@ i::before{
 	top: 0px;
 	left: 0px;
 }
+	.fondo img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 	
 @-ms-viewport {
 	width: device-width;
@@ -295,7 +303,7 @@ div#whatsapp {
     right: 6vw;
     cursor: pointer;
     border-radius: 50%;
-	z-index: 9998;
+	z-index: 8888;
 	animation: hover 2s infinite ease-in-out alternate;
 }
 @media screen and (orientation:portrait) and (max-width: 680px){
@@ -406,12 +414,12 @@ div#whatsapp {
 nav#menu {
     display: flex;
     justify-content: center;
-    background-color: aliceblue;
+    background-color: var(--colorPrincipal);
     padding: 20px 0px;
 	position: fixed;
     top: 0px;
     left: 0px;
-	z-index: 700;
+	z-index: 8999;
 }
 	#menu a {
 		text-decoration: none;
@@ -434,18 +442,41 @@ nav#menu {
 					width: auto;
 					height: 100%;
 				}
+			div#marcaNav {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				grid-gap: 40px;
+			}
+				#redesNav .redesMain {
+					display: flex;
+					grid-gap: 22px;
+				}
+					#redesNav .hi-icon {
+						width: 50px;
+						height: 50px;
+						font-size: 40px;
+						color: var(--colorSecundario);
+					}
+						#redesNav .hi-icon-effect-1b .hi-icon:hover {
+							background: rgba(255,255,255,1);
+							color: var(--colorPrincipal);
+						}
+						#redesNav .hi-icon-effect-1 .hi-icon:after {
+							box-shadow: 0 0 0 1px #fff;
+						}
 
 			ul#menuBox li {
 				font-family: 'Montserrat';
 				font-size: 120%;
 				font-weight: 600;
-				color: var(--colorBackColor);
+				color: white;
 				cursor: pointer;
 
 				transition: all 200ms ease-in-out;
 			}
 			ul#menuBox li:hover{
-				color: var(--colorPrincipal);
+				color: var(--colorSecundario);
 			}
 
 			div#menuMobileBox {
@@ -459,10 +490,11 @@ nav#menu {
 				flex-direction: column;
 				justify-content: center;
 				align-content: flex-end;
-				flex-wrap: wrap;
 				padding: 8vw;
 				grid-gap: 32px;
 				color: white;
+				overflow: hidden;
+				z-index: 1;
 
 				-webkit-transition: right 0.35s, -webkit-transform 0.35s;
 				transition: right 0.35s, transform 0.35s;
@@ -470,23 +502,26 @@ nav#menu {
 			#menuBoxMobile.activo div#menuMobileBox{
 				right: 0vw;
 			}
-			div#menuMobileBox a{
-				color: #fff;
-			}
-				div#menuMobileBox li {
-					width: auto;
-					font-family: 'Montserrat';
-					font-weight: 600;
-					font-size: clamp(22px, 6vw, 54px);
-					padding: 8px 4px 8px 24px;
-    				text-align: right;
-
-					-webkit-transition: all 0.35s, -webkit-transform 0.35s;
-					transition: all 0.35s, transform 0.35s;
+				#menuMobileBox .boxContainer {
+					overflow-y: auto;
 				}
-				div#menuMobileBox li:hover{
-
+				div#menuMobileBox a{
+					color: #fff;
 				}
+					div#menuMobileBox li {
+						width: auto;
+						font-family: 'Montserrat';
+						font-weight: 600;
+						font-size: clamp(22px, 6vw, 54px);
+						padding: 8px 4px 8px 24px;
+						text-align: right;
+
+						-webkit-transition: all 0.35s, -webkit-transform 0.35s;
+						transition: all 0.35s, transform 0.35s;
+					}
+					div#menuMobileBox li:hover{
+
+					}
 			div#menuMobileBtn {
 				position: relative;
 				z-index: 8000;
@@ -513,9 +548,9 @@ nav#menu {
 					position: absolute;
 				}
 
-#inicio{
-	height: 80vh;
-	justify-content: flex-end;
+#inicio {
+    height: 70vh;
+    justify-content: center;
 }
 	div#inicio .fondo {
 		overflow: hidden;
@@ -527,7 +562,7 @@ nav#menu {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			object-position: top;
+			object-position: center;
 		}
 
 	div#inicio .container {
@@ -544,18 +579,23 @@ nav#menu {
 			height: 16vh;
 		}
 		div#slogan {
-			font-size: clamp(12px, 1vw, 40px);
+			font-size: clamp(16px, 1vw, 40px);
 			padding: 0px 3vw 1.8em 3vw;
     		border-left: 1px solid #fff;
 		}
 			div#slogan h1 {
-				font-weight: 400;
+				font-weight: 700;
 				font-family: 'Montserrat';
+				font-size: 300%;
 			}
 			div#slogan p {
 				font-size: 150%;
     			font-weight: 400;
 			}
+			div#slogan span{
+				color: black;
+			}
+
 @media screen and (orientation:portrait){
 	#inicio{
 		height: 78vh;
@@ -570,7 +610,6 @@ nav#menu {
 		border-top: 1px solid #fff;
 		width: 82%;
 		margin: 0px;
-		margin-top: 21px;
 	}
 		
 }
@@ -582,12 +621,96 @@ nav#menu {
 @media (min-aspect-ratio: 13/9) and (orientation:landscape) {
 	
 }
-@media (min-aspect-ratio: 15/8) and (orientation:landscape) {
-		div#inicio .fondo img {
-			transform: translateY(0%);
-		}
+@media  (orientation:landscape) {
+	div#slogan {
+		font-size: clamp(10px, 1vw, 40px);
+	}
 }
-	
+
+
+
+
+#frase {
+    height: auto;
+    justify-content: center;
+}
+	div#frase .fondo {
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+		div#frase .fondo img {
+			width: 100%;
+			height: 100%;
+			object-fit: scale-down;
+			object-position: center;
+		}
+
+	div#frase .container {
+		width: 60%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		grid-gap: 34px;
+		position: relative;
+		align-items: center;
+		color: var(--colorTexto);
+		padding: 100px 0px;
+	}
+		div#frase .container span {
+			color: black;
+			font-size: 120%;
+		}
+		div#frase .container h2 {
+			color: var(--colorPrincipal);
+			font-size: 200%;
+		}
+
+
+	div#nosotros {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: stretch;
+	}
+		div#nosotros .colBox {
+			position: relative;
+			flex: 1 1 50%;
+		}
+			div#nosotros .colBox .fondo::after {
+				content: "";
+				width: 100%;
+				height: 100%;
+				display: block;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				background-color: #00000066;
+			}
+			div#nosotros .colBox .info {
+				position: relative;
+				padding: 6vw;
+				padding-top: 44%;
+				color: #fff;
+			}
+				div#nosotros .colBox .info h2 {
+					font-size: 150%;
+					display: inline-block;
+					padding: 6px 16px;
+					margin-bottom: 20px;
+					background-color: var(--colorPrincipal);
+				}
+
+
+
+
+
+		
+
+
+
 
 div#empresa {
 	position: relative;
@@ -935,7 +1058,7 @@ div#contacto .fondo {
 /* Effect 1a */
 .hi-icon-effect-1a .hi-icon:hover {
 	background: rgba(255,255,255,1);
-	color: #862671;
+	color: var(--colorPrincipal);
 }
 
 .hi-icon-effect-1a .hi-icon:hover:after {
@@ -949,7 +1072,7 @@ div#contacto .fondo {
 /* Effect 1b */
 .hi-icon-effect-1b .hi-icon:hover {
 	background: rgba(255,255,255,1);
-	color: #862671;
+	color: var(--colorPrincipal);
 }
 
 .hi-icon-effect-1b .hi-icon:after {
@@ -1265,6 +1388,15 @@ div#contacto .fondo {
 	article#servFamiliar img {
 		aspect-ratio: 1;
 	}
+
+	div#frase .container {
+		width: 76%;
+		padding: 60px 0px;
+		text-align: center;
+	}
+		div#frase .container h2 {
+			font-size: 160%;
+		}
 }
 
 
