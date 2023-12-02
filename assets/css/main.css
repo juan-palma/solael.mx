@@ -866,6 +866,14 @@ div#serviciosInfo {
 					cursor: pointer;
 					position: relative;
 					z-index: 500;
+
+					-webkit-transition: background-color, color, 0.2s, color 0.2s;
+					-moz-transition: background-color, color, 0.2s, color 0.2s;
+					transition: background-color, color, 0.2s, color 0.2s;
+				}
+				div#serviciosInfo .colBox .info button:hover{
+					background-color: white;
+					color: #000;
 				}
 	#serviciosInfo .btnBoxInfo {
 		width: 100%;
