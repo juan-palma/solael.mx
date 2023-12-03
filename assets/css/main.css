@@ -405,6 +405,9 @@ div#whatsapp {
 	height: 1px;
 	opacity: 0;
 }
+main{
+	overflow-x: hidden;
+}
 #fondo_body{
 	background : white;
 	background-size: cover;
@@ -644,6 +647,7 @@ nav#menu {
 #frase {
     height: auto;
     justify-content: center;
+	background-color: white;
 }
 	div#frase .fondo {
 		overflow: hidden;
@@ -889,13 +893,263 @@ div#serviciosInfo {
 		height: 100%;
 		position: absolute;
 		display: flex;
+		justify-content: center;
+		align-items: center;
 		top: 0px;
 		left: 0px;
 		overflow: hidden;
-		z-index: 20;
 	}
+		#serviciosInfo .btnBoxInfo .infoShow {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			grid-gap: 52px;
+    		padding: 8vw;
+			background-color: black;
+			color: white;
+			z-index: 600;
 
-		
+			-webkit-transition: transform 0.6s cubic-bezier(.7,-.01,.3,1);
+			-moz-transition: transform 0.6s cubic-bezier(.7,-.01,.3,1);
+			transition: transform 0.6s cubic-bezier(.7,-.01,.3,1);
+		}
+			#serviciosInfo .btnBoxInfo .infoShow > div{
+				position: relative;
+			}
+			#serviciosInfo .btnBoxInfo .infoShow  .fondo{
+				position: absolute;
+			}
+				#serviciosInfo .btnBoxInfo .infoShow  .fondo::after {
+					content: "";
+					width: 100%;
+					height: 100%;
+					display: block;
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					background-color: #00000066;
+				}
+			div#sInfo1 {
+				transform: translateX(-100vw);
+			}
+			div#sInfo1.activo{
+				transform: translateX(0vw);
+			}
+			div#sInfo2 {
+				transform: translateX(100vw);
+			}
+			div#sInfo2.activo {
+				transform: translateX(0vw);
+			}
+			
+				.btnClose {
+					position: absolute !important;
+					top: 40px;
+					right: 40px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: 3px;
+					font-size: 38px;
+					cursor: pointer;
+
+					-webkit-transition: color 0.6s cubic-bezier(.7,-.01,.3,1);
+					-moz-transition: color 0.6s cubic-bezier(.7,-.01,.3,1);
+					transition: color 0.6s cubic-bezier(.7,-.01,.3,1);
+				}
+				.btnClose:hover{
+					color: #b42b08;
+				}
+				div#sInfo1 .boxGeneral {
+					display: flex;
+					flex-direction: column;
+					grid-gap: 24px;
+				}
+			#serviciosInfo .btnBoxInfo div#sInfo2.infoShow {
+				flex-direction: column;
+				align-items: center ;
+				justify-content: center ;
+				width: 100%;
+				flex-wrap: nowrap;
+			}
+				div#sInfo2 .scrollControl {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					grid-gap: 54px;
+					height: 100%;
+					max-height: 100%;
+				}
+					div#sInfo2 .fila {
+						flex: 1 1 90%;
+						width: 90%;
+						max-width: 90%;
+						position: relative;
+						display: flex;
+						justify-content: center;
+						align-items: baseline;
+						grid-gap: 3vw;
+					}
+					div#sInfo2 .scrollControl > div:nth-child(2) {
+						display: flex;
+						flex-direction: column;
+						grid-gap: 8px;
+						flex: 0 0 auto;
+						width: auto;
+					}
+					
+
+
+div#faq {
+	padding: 6vw;
+	background-color: white;
+}
+	div#faq .info {
+		grid-gap: 48px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+		div#faq .info h2 {
+			font-size: clamp(28px, 1.6vw + 1rem, 64px);
+			color: black;
+			margin-bottom: 24px;
+		}
+		div#faqBoxGeneral {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			grid-gap: 32px;
+			width: 90%;
+		}
+			div#faqBoxGeneral .faq {
+				flex: 1 1 calc(33% - 22px);
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: center;
+				grid-gap: 32px;
+				text-align: center;
+			}
+				div#faqBoxGeneral .faq picture {
+					width: 80px;
+					height: 80px;
+					position: relative;
+				}
+					div#faqBoxGeneral .faq picture img {
+						width: auto;
+						height: 100%;
+					}
+				div#faqBoxGeneral .faq h4 {
+					color: var(--colorPrincipal);
+					font-weight: 700;
+				}
+
+
+
+
+
+div#diferente {
+	
+}
+	div#diferente .info {
+		position: relative;
+		grid-gap: 48px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		color: white;
+		padding: 6vw;
+	}
+		div#diferente .info h2 {
+			font-size: clamp(28px, 1.6vw + 1rem, 64px);
+			margin-bottom: 24px;
+		}
+		div#diferenteBoxGeneral {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			grid-gap: 32px;
+			width: 90%;
+		}
+			div#diferenteBoxGeneral .diferente {
+				flex: 1 1 calc(33% - 22px);
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				grid-gap: 32px;
+				text-align: center;
+			}
+			
+				div#diferenteBoxGeneral .diferente picture {
+					flex: 0 0 68px;
+					width: 68px;
+					height: auto;
+					position: relative;
+				}
+					div#diferenteBoxGeneral .diferente picture img {
+						width: auto;
+						height: 100%;
+					}
+				div#diferenteBoxGeneral .diferente > div {
+					display: flex;
+					flex-direction: column;
+					align-content: flex-start;
+					text-align: left;
+					grid-gap: 24px;
+					align-self: baseline;
+				}
+					div#diferenteBoxGeneral .diferente h4 {
+						font-weight: 700;
+						font-size: clamp(22px, .8vw + .8rem, 32px);
+					}
+					
+
+div#arte {
+	background-color: var(--colorPrincipal);
+	padding: 6vw 9vw;
+	font-size: clamp(22px, .8vw + .8rem, 32px);
+}
+	div#cerebro {
+		width: 40vw;
+		height: auto;
+		position: absolute;
+		bottom: -112px;
+		right: 10vw;
+		z-index: 1;
+	}
+		div#cerebro img {
+			width: 100%;
+			height: auto;
+		}
+	div#arte .colBox {
+		width: 60%;
+		color: white;
+		padding-right: 20%;
+		position: relative;
+		z-index: 2;
+	}
+		div#arte .colBox h2 {
+			color: black;
+			font-size: clamp(22px, 1vw + 1rem, 48px);
+			margin-bottom: 50px;
+		}
+
+
+
+
+#frase q {
+	font-size: clamp(24px, 1.2vw + 1rem, 60px);
+}
 
 
 
@@ -979,14 +1233,24 @@ div#contacto .fondo {
 
 	div#redes {
 		width: 100%;
-		background-color: var(--colorBackColor);
 		padding: 8vh;
 		align-items: center;
 	}
+		div#redes .fondo {
+			position: fixed;
+			z-index: -1;
+		}
+			div#redes .fondo img {
+				object-position: bottom;
+			}
 		div#redes .container {
 			display: flex;
-			align-content: stretch;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 			grid-gap: 42px;
+			color: white;
+			text-align: center;
 		}
 			div#redes .container .col3 {
 				flex: 1 1 33.333%;
@@ -997,17 +1261,31 @@ div#contacto .fondo {
 			}
 			div#redes .container div#redesBox {
 				flex-direction: column;
-				align-items: flex-start;
+				align-items: center;
 				text-align: left;
 			}
 				div#redes .container div#redesBox span {
-					margin-bottom: 38px;
+					margin-bottom: 20px;
 				}
 				div#redes .container div#redesBox .redesMain {
 					display: flex;
 					grid-gap: 36px;
 				}
-				
+				div#redes h2 {
+					font-size: clamp(24px, 1.4vw + 1rem, 44px);
+				}
+				div#box3 {
+					display: flex;
+					flex-direction: column;
+				}
+					div#box3 h3 {
+						font-size: clamp(20px, 1.1vw + 1rem, 38px);
+					}
+					div#box3 a {
+						text-decoration: none;
+						font-size: 140%;
+						color: white;
+					}
 			div#logoFooter img {
 				width: 146px;
 			}
@@ -1178,7 +1456,7 @@ div#contacto .fondo {
 /* ==========================================================================
 	Estilos para un especto de pie pero en dispositivos pequeños
 ========================================================================== */
-@media screen and (orientation:portrait) and (max-width: 680px){
+@media screen and (orientation:portrait) and (max-width: 780px){
 	
 }
 
@@ -1344,7 +1622,7 @@ div#contacto .fondo {
 		}
 
 		div#redes .container {
-			flex-direction: column-reverse;
+			
 		}
 		div#redes .container div#redesBox {
 			margin-top: 20px;
@@ -1425,7 +1703,43 @@ div#contacto .fondo {
 
 	div#serviciosInfo .colBox .info {
 		padding: 10vw;
+		padding-top: 160px;
 	}
+	div#sInfo2 .scrollControl {
+		justify-content: flex-start;
+		overflow-y: scroll;
+		padding-top: 40px;
+	}
+	div#sInfo2 .scrollControl > div:nth-child(1) {
+		flex-direction: column;
+	}
+	.btnClose {
+		top: 22px;
+		right: 22px;
+	}
+	div#serviciosInfo .colBox .info h2 {
+		font-size: 150%;
+	}
+
+
+
+
+	div#faqBoxGeneral .faq {
+		flex: 1 1 100%;
+	}
+
+
+	div#diferenteBoxGeneral .diferente {
+		flex-direction: column;
+		flex: 1 1 100%;
+	}
+
+
+	div#arte .colBox {
+		width: 100%;
+	}
+	
+
 }
 
 
@@ -1541,7 +1855,14 @@ div#contacto .fondo {
 	Media Queries
 ========================================================================== */
 @media only screen and (max-width: 590px) {
-	
+	div#cerebro {
+		width: 80%;
+		right: -20vw;
+		bottom: -60px;
+	}
+	div#arte .colBox {
+		padding: 0;
+	}
 }
 
 

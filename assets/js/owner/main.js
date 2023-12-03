@@ -1,11 +1,34 @@
 
 function iniciar() {
+
+	const sInfo1 = document.getElementById('sInfo1');
+	const sInfo2 = document.getElementById('sInfo2');
 	
 	function btnMobileActive(e) {
 		this.classList.toggle('activo');
 	}
 	const btnMobile = document.getElementById('menuBoxMobile');
 	btnMobile.addEventListener('click', btnMobileActive);
+
+	
+	
+	
+	function btnTargetActive(e) {
+		if(this.id.includes('Individaules')){
+			sInfo1.classList.toggle('activo');
+		} else if(this.id.includes('Grupales')) {
+			sInfo2.classList.toggle('activo');
+		}
+	}
+	const btnIndividuales = document.getElementById('btnServIndividaules');
+	btnIndividuales.addEventListener('click', btnTargetActive);
+	const btnIndividualesClose = document.getElementById('btnServIndividaulesClose');
+	btnIndividualesClose.addEventListener('click', btnTargetActive);
+
+	const btnGrupales = document.getElementById('btnServGrupales');
+	btnGrupales.addEventListener('click', btnTargetActive);
+	const btnGrupalesClose = document.getElementById('btnServGrupalesClose');
+	btnGrupalesClose.addEventListener('click', btnTargetActive);
 
 
 	//Activar acordeon

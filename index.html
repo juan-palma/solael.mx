@@ -299,7 +299,7 @@
 								Este modelo contempla 2 tipos de sesiones:<br />
 								la sesión inicial (diagnóstico) y las de seguimiento.
 							</p>
-							<button>Leer +</button>
+							<button id="btnServIndividaules">Leer +</button>
 						</div>
 					</div>
 					<div class="colBox">
@@ -310,38 +310,211 @@
 								Sesiones pensadas en residencias y asilos.<br />
 								Las actividades están diseñadas para grupos.
 							</p>
-							<button>Leer +</button>
+							<button id="btnServGrupales">Leer +</button>
 						</div>
 					</div>
 				</div>
 				<div class="btnBoxInfo">
 					<div id="sInfo1" class="infoShow">
-						<div>
-
+						<div class="fondo"><img src="assets/img/fondo_individuales.jpg" alt="Fondo"></div>
+						<div class="boxGeneral">
+							<h3>Consulta inicial</h3>
+							<p>
+								-Valoración cognitiva, emocional, biológica/funcional y social.<br />
+								-Reporte de resultados.<br />
+								-Diseño de intervención con el usuario y la familia.<br />
+							</p>
 						</div>
-						<div>
+						<div class="boxGeneral">
+							<h3>Consulta de seguimiento</h3>
+							<p>
+								-Sesión de estimulación cognitiva. Incluye intervención de EstimulARTE.<br />
+								-Material para la sesión.<br />
+								-Capacitación familiar.<br />
 
+							</p>
 						</div>
+						<div id="btnServIndividaulesClose" class="btnClose"><i class="fa-solid fa-xmark"></i></div>
 					</div>
 					<div id="sInfo2" class="infoShow">
-						<div>
-							<div>
-
+						<div class="fondo"><img src="assets/img/fondo_grupales.jpg" alt="Fondo"></div>
+						<div class="scrollControl">
+							<div class="fila">
+								<div>
+									<h3>
+										Paquete 1
+									</h3>
+									<p>
+										-8 sesiones grupales al mes<br />
+										(2 por semana)
+									</p>
+								</div>
+								<div>
+									<h3>
+										Paquete 2
+									</h3>
+									<p>
+										-12 sesiones grupales al mes<br />
+										(3 por semana)
+									</p>
+								</div>
+								<div>
+									<h3>
+										Paquete 3
+									</h3>
+									<p>
+										-16 sesiones grupales al mes<br />
+																(4 por semana)
+									</p>
+								</div>
+								<div>
+									<h3>
+										Paquete 4
+									</h3>
+									<p>
+										-20 sesiones grupales al mes<br />
+										(5 por semana)<br /><br />
+										-Incluye una sesión de <span class="negritas">EstimulARTE</span> a la semana
+									</p>
+								</div>
 							</div>
-							<div>
-
-							</div>
-							<div>
-
-							</div>
-							<div>
-
+							<div class="fila">
+								<p>
+									Todos los paquetes incluyen:<br />
+									-Valoración cognitiva completa por usuario<br />
+									-Materiales para todas las sesiones.
+								</p>
+								<p>
+									A cualquier paquete se puede integrar sesiones de EstimulARTE
+								</p>
 							</div>
 						</div>
-						<div>
+						<div id="btnServGrupalesClose" class="btnClose"><i class="fa-solid fa-xmark"></i></div>
+					</div>
+				</div>
 
+			</div>
+
+			<div id="faq" class="contenedorG">
+				<div class="colBox">
+					<div class="info">
+						<h2>Preguntas frecuentes</h2>
+						<div id="faqBoxGeneral">
+							<div class="faq">
+								<picture>
+									<img src="assets/img/interrogacion.svg" alt="signo">
+								</picture>
+								<h4>¿Qué zonas abarcan los servicios de Soláel?</h4>
+								<p>
+									Por el momento:<br />
+									Guadalajara, Zapopan, Tonalá, El Salto y Juanacatlán
+								</p>
+							</div>
+							<div class="faq">
+								<picture>
+									<img src="assets/img/interrogacion.svg" alt="signo">
+								</picture>
+								<h4>¿el adulto mayor debe vivir con algún tipo de demencia, o pérdida de memoria para recurrir a Soláel?</h4>
+								<p>
+									No. Nuestra terapia puede ser preventiva, lo que ayudará a retrasar los procesos naturales de pérdida de memoria y dificultades de razonamiento. 
+								</p>
+							</div>
+							<div class="faq">
+								<picture>
+									<img src="assets/img/interrogacion.svg" alt="signo">
+								</picture>
+								<h4>¿Qué perfil debe cumplir un paciente de Soláel?</h4>
+								<p>
+									Persona mayor de 60 años con, o sin demencia, o deterioro cognitivo.<br /><br />
+									Para tratamiento preventivo, persona de al menos 50 años.
+								</p>
+							</div>
 						</div>
 					</div>
+				</div>
+
+				<div id="faqTag" class="anchorTagEl"></div>
+			</div>
+
+			<div id="diferente" class="contenedorG">
+				<div class="colBox">
+					<div class="fondo"><img src="assets/img/fondo_diferente.jpg" alt="Fondo"></div>
+					<div class="info">
+						<h2>Qué nos hace diferentes</h2>
+						<div id="diferenteBoxGeneral">
+							<div class="diferente">
+								<picture>
+									<img src="assets/img/reloj_arena.svg" alt="signo">
+								</picture>
+								<div>
+									<h4>Plan personalizado</h4>
+									<p>
+										Cada tratamiento es diseñado a las necesidades de cada paciente. Esto garantiza resultados más efectivos y se verán resultados en un menor tiempo.
+									</p>
+								</div>
+							</div>
+							<div class="diferente">
+								<picture>
+									<img src="assets/img/personas.svg" alt="signo">
+								</picture>
+								<div>
+									<h4>Incluimos otras terapias no farmacológicas</h4>
+									<p>
+										Que son complementos adicionales, como pueden ser estimulación sensorial, arteterapia, musicoterapia, ludoterapia y psicomotricidad.
+									</p>
+								</div>
+							</div>
+							<div class="diferente">
+								<picture>
+									<img src="assets/img/notas.svg" alt="signo">
+								</picture>
+								<div>
+									<h4>Damos capacitación</h4>
+									<p>
+										PA familiares y gente responsable del paciente, sobre los cuidados generales de la enfermedad de demencia.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="diferenteTag" class="anchorTagEl"></div>
+			</div>
+
+			<div id="arte" class="contenedorG">
+				<div id="cerebro">
+					<picture>
+						<img src="assets/img/cerebro.png" alt="cerebro">
+					</picture>
+				</div>
+				<div class="colBox">
+					<h2>EstimulARTE</h2>
+					<div>
+						<p>
+							EstimulARTE es el nombre de un sistema de terapia que hemos desarrollado, que consiste en un conjunto de intervenciones orientadas a estimular, mantener o potenciar el rendimiento de la memoria y razonamiento.
+						</p>
+						<p>
+							Mejora la afectividad y la autoestima, al mismo tiempo que ayuda a evitar la desconexión con su entorno y fortalece las relaciones sociales, favorece la independencia en la vida cotidiana, e incrementa la calidad de vida de las personas adultas mayores.<br /><br />
+							Las terapias que se consideran en estimularte, son:
+						</p>
+						<ul>
+							<li>Estimulación sensorial</li>
+							<li>Arteterapia</li>
+							<li>Musicoterapia.</li>
+							<li>Ludoterapia</li>
+							<li>Psicomotricidad.</li>
+						</ul>
+					</div>
+				</div>
+
+				<div id="arteTag" class="anchorTagEl"></div>
+			</div>
+
+			<div id="frase" class="contenedorG">
+				<div class="fondo"><img src="assets/img/sol.svg" alt="Fondo inicio"></div>
+				<div class="container">
+					<q>El Sol brilla para todos</q>
 				</div>
 			</div>
 
@@ -354,6 +527,14 @@
 		<footer>
 			<div id="redes" class="contenedorG">
 				<div class="container">
+					<span>No pierdas más tiempo</span>
+					<h2>
+						Contáctanos
+					</h2>
+					<div id="box3" class="col3">
+						<h3>Teléfono</h3>
+						<a href="tel:3317193696">33 1719.3696</a>
+					</div>
 					<div id="redesBox" class="col3">
 						<span>Redes sociales:</span>
 						<div class="redesMain">
@@ -373,13 +554,9 @@
 							</a>
 						</div>
 					</div>
-					<div id="logoFooter" class="col3">
-						<picture>
-							<img src="assets/img/" alt="Logo">
-						</picture>
-					</div>
-					<div id="box3" class="col3"></div>
+					
 				</div>
+				<div class="fondo"><img src="assets/img/fondo_footer.jpg" alt="Fondo inicio"></div>
 			</div>
 			<div id="footer" class="contenedorG">
 				<div class="container">
@@ -393,7 +570,7 @@
 		</footer>
 		
 		<div id="whatsapp">
-			<a href="https://wa.me/+521" target="_blank">
+			<a href="https://wa.me/+5213317193696" target="_blank">
 				<picture>
 					<img src="assets/img/icono-whatsapp.svg" alt="WhatsApp-Amatista" title="Chatea con nosotros">
 				</picture>
