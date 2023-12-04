@@ -588,7 +588,7 @@ nav#menu {
 		align-items: center;
 		grid-gap: 3vw;
 		color: white;
-		padding-top: 100px;
+		padding-top: 70px;
 	}
 		div#inicio .container .logo img {
 			height: 16vh;
@@ -608,7 +608,8 @@ nav#menu {
     			font-weight: 400;
 			}
 			div#slogan span{
-				color: black;
+				display: inline-block;
+				margin-top: 20px;
 			}
 
 @media screen and (orientation:portrait){
@@ -622,7 +623,7 @@ nav#menu {
 	}
 	div#slogan {
 		border-left: 0px none transparent;
-		width: 82%;
+		width: 94%;
 		margin: 0px;
 	}
 		
@@ -1858,7 +1859,7 @@ div#contacto .fondo {
 	div#cerebro {
 		width: 80%;
 		right: -20vw;
-		bottom: -60px;
+		bottom: calc(60% - 60vw);
 	}
 	div#arte .colBox {
 		padding: 0;
