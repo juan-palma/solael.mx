@@ -1277,7 +1277,8 @@ div#contacto .fondo {
 				}
 				div#box3 {
 					display: flex;
-					flex-direction: column;
+					flex-wrap: wrap;
+					grid-gap: 42px;
 				}
 					div#box3 h3 {
 						font-size: clamp(20px, 1.1vw + 1rem, 38px);

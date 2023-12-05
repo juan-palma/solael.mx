@@ -49,9 +49,10 @@ function iniciar() {
 
 
 //codigo para avtivar el correo
-const codigo = "bWFpbHRvOmNvbnRhY3RvQHRwLWFib2dhZG9zLmNvbQ==";
+const codigo = "bWFpbHRvOmNvbnRhY3RvQHNvbGFlbC5teA==";
 function openMailer(element) {
-	const mail = atob(codigo);
+	const aMyUTF8Output = base64DecToArr(codigo);
+	const mail = UTF8ArrToStr(aMyUTF8Output);
 	element.setAttribute("href", mail);
 	element.setAttribute("onclick", "");
 };
@@ -68,5 +69,5 @@ requirejs.config({
 	baseUrl: "assets/js/owner",
 	paths: { a: "../animaciones", l: "../librerias", n: "/node_modules"},
 });
-requirejs(["l/modernizr", "l/precarga", "validaciones", "alertas", "peticiones", "l/brands.min", "l/solid.min", "l/fontawesome"], iniciar);
+requirejs(["l/modernizr", "l/precarga", "validaciones", "alertas", "peticiones", "l/brands.min", "l/solid.min", "l/fontawesome", "l/js_base64"], iniciar);
 
